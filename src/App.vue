@@ -34,4 +34,15 @@ body {
   max-width: 60px;
   height: auto;
 }
+
+.button {
+   border-radius: 20px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
 </style>
