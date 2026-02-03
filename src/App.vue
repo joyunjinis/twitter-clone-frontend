@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "App",
-}
+};
 </script>
 
 <style>
@@ -36,13 +36,19 @@ body {
 }
 
 .button {
-   border-radius: 20px;
-    border: 1px solid white;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 10px 0px;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: small;
+  width: 100%;
 }
 </style>
