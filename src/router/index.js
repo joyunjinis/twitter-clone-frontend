@@ -1,4 +1,7 @@
+import FeedItem from "@/components/FeedItem.vue";
+import ItemComponent from "@/components/ItemComponent.vue";
 import DemoPage from "@/views/DemoPage.vue";
+import LifeCycle from "@/views/LifeCycle.vue";
 import LoginPage from "@/views/LoginPage.vue";
 import MainPage from "@/views/MainPage.vue";
 import SignUpPage from "@/views/SignUpPage.vue";
@@ -26,6 +29,18 @@ const router = createRouter({
     {
       path: "/main",
       component: MainPage,
+    },
+    {
+      path: "/lifecycle",
+      component: LifeCycle,
+    },
+    {
+      path: "/item",
+      component: ItemComponent,
+    },
+    {
+      path: "/feeditem",
+      component: FeedItem,
     },
   ],
 });
