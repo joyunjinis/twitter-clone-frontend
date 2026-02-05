@@ -84,5 +84,8 @@ export const useFeedStore = defineStore("feed", {
     addFeed(feed) {
       this.feedList.unshift(feed);
     },
+    removeFeed(id) {
+      this.feedList = this.feedList.filter((feed) => feed.id !== id);
+    },
   },
 });
