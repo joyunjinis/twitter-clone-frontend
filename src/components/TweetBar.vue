@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <input type="text" placeholder="what's good, user?" class="input-form" />
-    <img src="@/assets//search.png" class="search-icon" />
+    <img src="@/assets/search.png" class="search-icon" />
   </div>
 </template>
 
