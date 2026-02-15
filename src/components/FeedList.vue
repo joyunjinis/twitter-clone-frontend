@@ -1,6 +1,10 @@
 <template>
   <div class="feed-list-container">
-    <FeedItem v-for="feed in feedStore.feedList" :key="feed.id" :item="feed" />
+    <FeedItem
+      v-for="feed in feedStore.getFeedList"
+      :key="feed.id"
+      :item="feed"
+    />
   </div>
 </template>
 
@@ -9,14 +13,14 @@ import FeedItem from "./FeedItem.vue";
 import { useFeedStore } from "@/store/feed";
 export default {
   name: "FeedList",
+  components: { FeedItem },
   data() {
     return {
       feedStore: useFeedStore(),
     };
   },
-  components: { FeedItem },
   created() {
-    this.feedStore.getFeedList;
+    this.feedStore.getFeedData();
   },
 };
 </script>

@@ -1,13 +1,34 @@
 <template>
   <div class="container">
-    <input type="text" placeholder="what's good, user?" class="input-form" />
-    <img src="@/assets/search.png" class="search-icon" />
+    <input
+      type="text"
+      :placeholder="userStore.placeholder"
+      class="input-form"
+      v-model="tweetContent"
+    />
+    <img src="@/assets/search.png" class="search-icon" @click="tweet" />
   </div>
 </template>
 
 <script>
+import { useFeedStore } from "@/store/feed";
+import { useUserStore } from "@/store/user";
+
 export default {
   name: "TweetBar",
+  data() {
+    return {
+      tweetContent: "",
+      userStore: useUserStore(), // useStore → userStore
+      feedStore: useFeedStore(),
+    };
+  },
+  methods: {
+    async tweet() {
+      await this.feedStore.addFeed(this.tweetContent);
+      this.tweetContent = "";
+    },
+  },
 };
 </script>
 
@@ -20,7 +41,6 @@ export default {
   height: auto;
   position: relative;
 }
-
 .input-form {
   box-sizing: border-box;
   width: 100%;
@@ -30,7 +50,6 @@ export default {
   padding: 10px;
   z-index: 0;
 }
-
 .search-icon {
   box-sizing: border-box;
   width: 40px;

@@ -6,6 +6,7 @@
     </div>
     <TweetBar />
     <FeedList />
+    <div class="logout" @click="logout">logout</div>
   </div>
 </template>
 
@@ -13,18 +14,20 @@
 import TweetBar from "@/components/TweetBar.vue";
 import FeedList from "@/components/FeedList.vue";
 import { useUserStore } from "@/store/user";
-import { useFeedStore } from "@/store/feed";
+
 export default {
   name: "MainPage",
+  components: { TweetBar, FeedList },
   data() {
     return {
       userStore: useUserStore(),
-      FeedStore: useFeedStore(),
     };
   },
-  components: { TweetBar, FeedList },
-  created() {
-    this.userStore.getUserName;
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push("/");
+    },
   },
 };
 </script>
@@ -35,5 +38,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logout {
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+  color: red;
+  cursor: pointer;
 }
 </style>
