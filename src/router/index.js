@@ -13,6 +13,14 @@ const router = createRouter({
     {
       path: "/",
       component: LoginPage,
+      beforeEnter: (to, from, next) => {
+        const token = localStorage.getItem("access_token");
+        if (token) {
+          next("/main");
+        } else {
+          next();
+        }
+      },
     },
     {
       path: "/demo",
@@ -25,10 +33,26 @@ const router = createRouter({
     {
       path: "/signup",
       component: SignUpPage,
+      beforeEnter: (to, from, next) => {
+        const token = localStorage.getItem("access_token");
+        if (token) {
+          next("/main");
+        } else {
+          next();
+        }
+      },
     },
     {
       path: "/main",
       component: MainPage,
+      beforeEnter: (to, form, next) => {
+        const token = localStorage.getItem("access_token");
+        if (token) {
+          next();
+        } else {
+          next("/");
+        }
+      },
     },
     {
       path: "/lifecycle",

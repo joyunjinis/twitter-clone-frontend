@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       tweetContent: "",
-      userStore: useUserStore(), // useStore → userStore
+      userStore: useUserStore(),
       feedStore: useFeedStore(),
     };
   },
