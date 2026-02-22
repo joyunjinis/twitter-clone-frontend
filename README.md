@@ -35,9 +35,3 @@ Vue 기반으로 구현한 X(Twitter) 클론 프론트엔드입니다.
 ## 🚀 Getting Started
 ``` bash
 yarn run dev
-
-
-
-
-
-
