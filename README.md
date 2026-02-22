@@ -6,7 +6,7 @@ Vue 기반으로 구현한 X(Twitter) 클론 프론트엔드입니다.
 ## 🔗 Links
 - Live Demo (Vercel): https://clone-x-frontend-joyunjinis-projects.vercel.app
 - Backend Repo: https://github.com/joyunjinis/twitter-clone-backend.git
-- Backend Live (Railway): clone-x-backend-production.up.railway.app
+- Backend Live (Railway): https://clone-x-backend-production.up.railway.app
 > Backend는 API 서버이므로 브라우저에서 직접 접속 시 화면이 표시되지 않을 수 있습니다.
 
 ## ⚙️ Features
